@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Fulfos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="passwordPage" class="page">
+        <h2>Welcome, Fulfos 💫</h2>
+        <p>Please enter your magic word to begin this memory journey:</p>
+        <div class="password-wrapper">
+            <input type="password" id="secretInput" placeholder="It's what you call me 💭" />
+            <span id="toggleEye" onclick="togglePassword()">👁️</span>
+        </div>
+        <button onclick="checkPassword()">❤️ Unlock</button>
+        <p id="wrongPasswordMsg" style="color:red; display:none; margin-top:10px;">
+            Oops! Try again, Fulfos 💔
+        </p>
+    </div>
+
+
+  <div id="page1" class="page hidden">
+    <img src="assets/friendship-photo.jpg" alt="Our Friendship" class="main-photo" />
+    <p class="message">
+      Hi, Fulfos.<br>
+      Thank you for giving me a chance to light your days with smiles,<br>
+      love and time over these 6 magical years.
+    </p>
+    <button class="next-btn" onclick="goToPage2()">Next</button>
+  </div>
+
+  <div id="page2" class="page hidden">
+    <img src="assets/cute-gif.gif" alt="Cute GIF" class="gif-img" />
+    <h2>Call me boro vaia, Fulfos?</h2>
+    <div class="btn-group">
+      <button onclick="handleYes()">Yes</button>
+      <button id="noBtn" onclick="handleNo()">No</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <p>
+        Thank you for calling me <strong>boro vaia</strong> for the first time 💖<br>
+        আমাকে সবসময় প্রথম সালাম ও অগাধ সম্মান দিবেন।<br>
+        You're truly my precious finest sister.
+      </p>
+      <div id="floating-text">✨ Boro Vaia Unlocked! ✨</div>
+      <button class="continue-btn" onclick="goToLetterPage()">Continue</button>
+    </div>
+  </div>
+
+  <div id="letterPage" class="page hidden">
+  <div class="letter-box">
+    <h2>To My Finest Sister, Fulfos 💌</h2>
+    <p class="letter-text">
+      ছয় বছর আগে আন্টিকে বিচার দেওয়ার পর নক করেছিলেন মনে আছে???<br>
+      ‘Hi, ছোট্ট Fulfos আপু’ আজকে কি আবার বিচার দিবো???<br><br>
+
+      তুমি আমার জীবনের এক উজ্জ্বল উপহার, যাকে আমি পেইন দিতে পারি, মাথার উপর উঠে লাফালাফি করতে পারি<br><br>
+
+      আজ এই পাতায় শুধু এটুকুই বলব <strong>Youre my finest sister</strong><br><br>
+
+      — বড় ভাইয়া 🌙
+    </p>
+    <button class="end-btn" onclick="finishJourney()">End Journey</button>
+  </div>
+</div>
+
+
+  <canvas id="fireworks"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
